@@ -4,8 +4,19 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="LeetCode刷题计划（二）, CPAraDOX">
-    <meta name="description" content="为了更有效地刷题，汇总了leetcode题目分类，同时作为之后写题解博客的索引">
+    <meta name="keywords" content="LeetCode每日打卡4-1, CPAraDOX">
+    <meta name="description" content="题目列表：
+
+1111.有效括号的嵌套深度
+
+20.有效的括号
+
+22.括号生成
+
+32.最长有效括号
+
+
+1111.有效括号的嵌套深度题目有效括号字符串 定义：对于每个左括号，都能找到与之对应的右括号，反之亦然。详情参见题末「有效括号字符">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +24,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>LeetCode刷题计划（二） | CPAraDOX</title>
+    <title>LeetCode每日打卡4-1 | CPAraDOX</title>
     <link rel="icon" type="image/jpeg" href="/favicon.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -316,12 +327,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">LeetCode刷题计划（二）</h1>
+                    <h1 class="description center-align post-title">LeetCode每日打卡4-1</h1>
                 </div>
             </div>
         </div>
@@ -442,6 +453,10 @@
                                 <span class="chip bg-color">leetcode</span>
                             </a>
                         
+                            <a href="/tags/%E6%AF%8F%E6%97%A5%E6%89%93%E5%8D%A1/">
+                                <span class="chip bg-color">每日打卡</span>
+                            </a>
+                        
                     </div>
                     
                 </div>
@@ -463,7 +478,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-03-28
+                    2020-04-01
                 </div>
                 
 
@@ -477,14 +492,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    913
+                    1.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    7 分
                 </div>
                 
 
@@ -495,1017 +510,260 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="LeetCode刷题计划"><a href="#LeetCode刷题计划" class="headerlink" title="LeetCode刷题计划"></a>LeetCode刷题计划</h1><h2 id="Backtracking"><a href="#Backtracking" class="headerlink" title="Backtracking"></a>Backtracking</h2><table>
+                <p>题目列表：</p>
+<ul>
+<li><p>1111.有效括号的嵌套深度</p>
+</li>
+<li><p>20.有效的括号</p>
+</li>
+<li><p>22.括号生成</p>
+</li>
+<li><p>32.最长有效括号</p>
+</li>
+</ul>
+<h2 id="1111-有效括号的嵌套深度"><a href="#1111-有效括号的嵌套深度" class="headerlink" title="1111.有效括号的嵌套深度"></a>1111.有效括号的嵌套深度</h2><h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p><strong>有效括号字符串</strong> 定义：对于每个左括号，都能找到与之对应的右括号，反之亦然。详情参见题末「<strong>有效括号字符串</strong>」部分。</p>
+<p><strong>嵌套深度</strong> <code>depth</code> 定义：即有效括号字符串嵌套的层数，<code>depth(A)</code> 表示有效括号字符串 <code>A</code> 的嵌套深度。详情参见题末「<strong>嵌套深度</strong>」部分。</p>
+<p>有效括号字符串类型与对应的嵌套深度计算方法如下图所示：</p>
+<table>
 <thead>
 <tr>
-<th align="left">题号</th>
-<th>题目名称</th>
-<th>状态</th>
+<th>1.空字符串</th>
+<th>2.AB型</th>
+<th>3.(A)型</th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="left">78</td>
-<td>Subsets</td>
-<td></td>
+<td>“”</td>
+<td><code>(())()</code></td>
+<td><code>((())())</code></td>
 </tr>
 <tr>
-<td align="left">90</td>
-<td>Subsets II</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">77</td>
-<td>Combinations</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">39</td>
-<td>Combination Sum</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">40</td>
-<td>Combination Sum II</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">216</td>
-<td>Combination Sum III</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">377</td>
-<td>Combination Sum IV</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">254</td>
-<td>Factor Combinations</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">46</td>
-<td>Permutations</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">47</td>
-<td>Permutations II</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">31</td>
-<td>Next Permutation</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">60</td>
-<td>Permutation Sequence</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">291</td>
-<td>Word Pattern II</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">17</td>
-<td>Letter Combinations of a Phone Number</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">320</td>
-<td>Generalized Abbreviation</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">93</td>
-<td>Restore IP Addresses</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">282</td>
-<td>Expression Add Operators</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">140</td>
-<td>Word Break II</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">351</td>
-<td>Android Unlock Patterns</td>
-<td></td>
+<td>depth = 0</td>
+<td>depth = max(2,1) = 2</td>
+<td>depth = 1 + depth(A) = 3</td>
 </tr>
 </tbody></table>
-<h2 id="Dynamic-Programming"><a href="#Dynamic-Programming" class="headerlink" title="Dynamic Programming"></a>Dynamic Programming</h2><table>
-<thead>
-<tr>
-<th align="left">题号</th>
-<th>题目名称</th>
-<th>状态</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">70</td>
-<td>Climbing Stairs</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">62</td>
-<td>Unique Paths</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">63</td>
-<td>Unique Paths II</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">120</td>
-<td>Triangle</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">279</td>
-<td>Perfect Squares</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">139</td>
-<td>Word Break</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">375</td>
-<td>Guess Number Higher or Lower II</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">312</td>
-<td>Burst Balloons</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">322</td>
-<td>Coin Change</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">256</td>
-<td>Paint House</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">265</td>
-<td>Paint House II</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">64</td>
-<td>Minimum Path Sum</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">72</td>
-<td>Edit Distance</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">97</td>
-<td>Interleaving String</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">174</td>
-<td>Dungeon Game</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">221</td>
-<td>Maximal Square</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">85</td>
-<td>Maximal Rectangle</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">363</td>
-<td>Max Sum of Rectangle No Larger Than K</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">198</td>
-<td>House Robber</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">213</td>
-<td>House Robber II</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">276</td>
-<td>Paint Fence</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">91</td>
-<td>Decode Ways</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">10</td>
-<td>Regular Expression Matching</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">44</td>
-<td>Wildcard Matching</td>
-<td></td>
-</tr>
-</tbody></table>
-<h2 id="LinkedList"><a href="#LinkedList" class="headerlink" title="LinkedList"></a>LinkedList</h2><table>
-<thead>
-<tr>
-<th align="left">题号</th>
-<th>题目名称</th>
-<th>状态</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">206</td>
-<td>Reverse Linked List</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">141</td>
-<td>Linked List Cycle</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">24</td>
-<td>Swap Nodes in Pairs</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">328</td>
-<td>Odd Even Linked List</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">92</td>
-<td>Reverse Linked List II</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">237</td>
-<td>Delete Node in a Linked List</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">19</td>
-<td>Remove Nth Node From End of List</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">83</td>
-<td>Remove Duplicates from Sorted List</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">203</td>
-<td>Remove Linked List Elements</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">82</td>
-<td>Remove Duplicates from Sorted List II</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">369</td>
-<td>Plus One Linked List</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">2</td>
-<td>Add Two Numbers</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">160</td>
-<td>Intersection of Two Linked Lists</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">21</td>
-<td>Merge Two Sorted Lists</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">234</td>
-<td>Palindrome Linked List</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">143</td>
-<td>Reorder List</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">142</td>
-<td>Linked List Cycle II</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">148</td>
-<td>Sort List</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">25</td>
-<td>Reverse Nodes in k-Group</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">61</td>
-<td>Rotate List</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">86</td>
-<td>Partition List</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">23</td>
-<td>Merge k Sorted Lists</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">147</td>
-<td>Insertion Sort List</td>
-<td></td>
-</tr>
-</tbody></table>
-<h2 id="Binary-Search"><a href="#Binary-Search" class="headerlink" title="Binary Search"></a>Binary Search</h2><table>
-<thead>
-<tr>
-<th align="left">题号</th>
-<th>题目名称</th>
-<th>状态</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">278</td>
-<td>First Bad Version</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">35</td>
-<td>Search Insert Position</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">33</td>
-<td>Search in Rotated Sorted Array</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">81</td>
-<td>Search in Rotated Sorted Array II</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">153</td>
-<td>Find Minimum in Rotated Sorted Array</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">154</td>
-<td>Find Minimum in Rotated Sorted Array II</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">162</td>
-<td>Find Peak Element</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">374</td>
-<td>Guess Number Higher or Lower</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">34</td>
-<td>Find First and Last Position of Element in Sorted Array</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">349</td>
-<td>Intersection of Two Arrays</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">350</td>
-<td>Intersection of Two Arrays II</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">315</td>
-<td>Count of Smaller Numbers After Self</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">300</td>
-<td>Longest Increasing Subsequence</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">354</td>
-<td>Russian Doll Envelopes</td>
-<td></td>
-</tr>
-</tbody></table>
-<h2 id="Matrix"><a href="#Matrix" class="headerlink" title="Matrix"></a>Matrix</h2><table>
-<thead>
-<tr>
-<th align="left">题号</th>
-<th>题目名称</th>
-<th>状态</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">48</td>
-<td>Rotate Image</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">54</td>
-<td>Spiral Matrix</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">59</td>
-<td>Spiral Matrix II</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">73</td>
-<td>Set Matrix Zeroes</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">311</td>
-<td>Sparse Matrix Multiplication</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">329</td>
-<td>Longest Increasing Path in a Matrix</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">378</td>
-<td>Kth Smallest Element in a Sorted Matrix</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">74</td>
-<td>Search a 2D Matrix</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">240</td>
-<td>Search a 2D Matrix II</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">370</td>
-<td>Range Addition</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">79</td>
-<td>Word Search</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">296</td>
-<td>Best Meeting Point</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">361</td>
-<td>Bomb Enemy</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">317</td>
-<td>Shortest Distance from All Buildings</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">302</td>
-<td>Smallest Rectangle Enclosing Black Pixels</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">36</td>
-<td>Valid Sudoku</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">37</td>
-<td>Sudoku Solver</td>
-<td></td>
-</tr>
-</tbody></table>
-<h2 id="DFS-amp-BFS"><a href="#DFS-amp-BFS" class="headerlink" title="DFS&amp;BFS"></a>DFS&amp;BFS</h2><table>
-<thead>
-<tr>
-<th align="left">题号</th>
-<th>题目名称</th>
-<th>状态</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">200</td>
-<td>Number of Islands</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">286</td>
-<td>Walls and Gates</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">130</td>
-<td>Surrounded Regions</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">339</td>
-<td>Nested List Weight Sum</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">364</td>
-<td>Nested List Weight Sum II</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">127</td>
-<td>Word Ladder</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">51</td>
-<td>N-Queens</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">52</td>
-<td>N-Queens II</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">126</td>
-<td>Word Ladder II</td>
-<td></td>
-</tr>
-</tbody></table>
-<h2 id="Stack-amp-PriorityQueue"><a href="#Stack-amp-PriorityQueue" class="headerlink" title="Stack &amp; PriorityQueue"></a>Stack &amp; PriorityQueue</h2><table>
-<thead>
-<tr>
-<th align="left">题号</th>
-<th>题目名称</th>
-<th>状态</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">155</td>
-<td>Min Stack</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">232</td>
-<td>Implement Queue using Stacks</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">225</td>
-<td>Implement Stack using Queues</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">150</td>
-<td>Evaluate Reverse Polish Notation</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">71</td>
-<td>Simplify Path</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">388</td>
-<td>Longest Absolute File Path</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">394</td>
-<td>Decode String</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">224</td>
-<td>Basic Calculator</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">227</td>
-<td>Basic Calculator II</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">385</td>
-<td>Mini Parser</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">84</td>
-<td>Largest Rectangle in Histogram</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">215</td>
-<td>Kth Largest Element in an Array</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">347</td>
-<td>Top K Frequent Elements</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">313</td>
-<td>Super Ugly Number</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">373</td>
-<td>Find K Pairs with Smallest Sums</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">218</td>
-<td>The Skyline Problem</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">332</td>
-<td>Reconstruct Itinerary</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">341</td>
-<td>Flatten Nested List Iterator</td>
-<td></td>
-</tr>
-</tbody></table>
-<h2 id="Bit-Manipulation"><a href="#Bit-Manipulation" class="headerlink" title="Bit Manipulation"></a>Bit Manipulation</h2><table>
-<thead>
-<tr>
-<th align="left">题号</th>
-<th>题目名称</th>
-<th>状态</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">389</td>
-<td>Find the Difference</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">136</td>
-<td>Single Number</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">318</td>
-<td>Maximum Product of Word Lengths</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">393</td>
-<td>UTF-8 Validation</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">201</td>
-<td>Bitwise AND of Numbers Range</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">371</td>
-<td>Sum of Two Integers emove Element</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">338</td>
-<td>Counting Bits</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">89</td>
-<td>Gray Code</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">268</td>
-<td>Missing Number</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">191</td>
-<td>Number of 1 Bits</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">190</td>
-<td>Reverse Bits</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">137</td>
-<td>Single Number II</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">260</td>
-<td>Single Number III</td>
-<td></td>
-</tr>
-</tbody></table>
-<h2 id="Topological-Sort"><a href="#Topological-Sort" class="headerlink" title="Topological Sort"></a>Topological Sort</h2><table>
-<thead>
-<tr>
-<th align="left">题号</th>
-<th>题目名称</th>
-<th>状态</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">207</td>
-<td>Course Schedule</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">210</td>
-<td>Course Schedule II</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">269</td>
-<td>Alien Dictionary</td>
-<td></td>
-</tr>
-</tbody></table>
-<h2 id="Random"><a href="#Random" class="headerlink" title="Random"></a>Random</h2><table>
-<thead>
-<tr>
-<th align="left">题号</th>
-<th>题目名称</th>
-<th>状态</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">384</td>
-<td>Shuffle an Array</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">398</td>
-<td>Random Pick Index</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">382</td>
-<td>Linked List Random Node</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">380</td>
-<td>Insert Delete GetRandom O(1)</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">381</td>
-<td>Insert Delete GetRandom O(1) - Duplicates allowed</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">138</td>
-<td>Copy List with Random Pointer</td>
-<td></td>
-</tr>
-</tbody></table>
-<h2 id="Graph"><a href="#Graph" class="headerlink" title="Graph"></a>Graph</h2><table>
-<thead>
-<tr>
-<th align="left">题号</th>
-<th>题目名称</th>
-<th>状态</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">133</td>
-<td>Clone Graph</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">399</td>
-<td>Evaluate Division</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">310</td>
-<td>Minimum Height Trees</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">149</td>
-<td>Max Points on a Line</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">335</td>
-<td>Self Crossing</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">356</td>
-<td>Line Reflection</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">391</td>
-<td>Perfect Rectangle</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">223</td>
-<td>Rectangle Area</td>
-<td></td>
-</tr>
-</tbody></table>
-<h2 id="Union-Find"><a href="#Union-Find" class="headerlink" title="Union Find"></a>Union Find</h2><table>
-<thead>
-<tr>
-<th align="left">题号</th>
-<th>题目名称</th>
-<th>状态</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">261</td>
-<td>Graph Valid Tree</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">323</td>
-<td>Number of Connected Components in an Undirected Graph</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">305</td>
-<td>Number of Islands II</td>
-<td></td>
-</tr>
-</tbody></table>
-<h2 id="Trie"><a href="#Trie" class="headerlink" title="Trie"></a>Trie</h2><table>
-<thead>
-<tr>
-<th align="left">题号</th>
-<th>题目名称</th>
-<th>状态</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">211</td>
-<td>Add and Search Word - Data structure design</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">208</td>
-<td>Implement Trie (Prefix Tree)</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">212</td>
-<td>Word Search II</td>
-<td></td>
-</tr>
-</tbody></table>
-<h2 id="Design"><a href="#Design" class="headerlink" title="Design"></a>Design</h2><table>
-<thead>
-<tr>
-<th align="left">题号</th>
-<th>题目名称</th>
-<th>状态</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">359</td>
-<td>Logger Rate Limiter</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">346</td>
-<td>Moving Average from Data Stream</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">362</td>
-<td>Design Hit Counter</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">281</td>
-<td>Zigzag Iterator</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">284</td>
-<td>Peeking Iterator</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">251</td>
-<td>Flatten 2D Vector</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">288</td>
-<td>Unique Word Abbreviation</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">170</td>
-<td>Two Sum III - Data structure design</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">348</td>
-<td>Design Tic-Tac-Toe</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">379</td>
-<td>Design Phone Directory</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">353</td>
-<td>Design Snake Game</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">146</td>
-<td>LRU Cache</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">355</td>
-<td>Design Twitter</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">303</td>
-<td>Range Sum Query - Immutable</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">304</td>
-<td>Range Sum Query 2D - Immutable</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">307</td>
-<td>Range Sum Query - Mutable</td>
-<td></td>
-</tr>
-<tr>
-<td align="left">308</td>
-<td>Range Sum Query 2D - Mutable</td>
-<td></td>
-</tr>
-</tbody></table>
+<p>给你一个「有效括号字符串」 <code>seq</code>，请你将其分成两个不相交的有效括号字符串，<code>A</code> 和 <code>B</code>，并使这两个字符串的深度最小。</p>
+<ul>
+<li>不相交：每个 <code>seq[i]</code> 只能分给 <code>A</code> 和 <code>B</code> 二者中的一个，不能既属于 <code>A</code> 也属于 <code>B</code> 。</li>
+<li><code>A</code> 或 <code>B</code> 中的元素在原字符串中可以不连续。</li>
+<li><code>A.length + B.length = seq.length</code></li>
+<li>深度最小：<code>max(depth(A), depth(B))</code> 的可能取值最小。 </li>
+</ul>
+<p>划分方案用一个长度为 <code>seq.length</code> 的答案数组 <code>answer</code> 表示，编码规则如下：</p>
+<ul>
+<li><code>answer[i] = 0</code>，<code>seq[i]</code> 分给 A 。</li>
+<li><code>answer[i] = 1</code>，<code>seq[i]</code> 分给 B 。<br>如果存在多个满足要求的答案，只需返回其中任意 <strong>一个</strong> 即可。</li>
+</ul>
+<p>示例 1：</p>
+<pre><code>输入：seq = &quot;(()())&quot;
+输出：[0,1,1,1,1,0]</code></pre><p>示例 2：</p>
+<pre><code>输入：seq = &quot;()(())()&quot;
+输出：[0,0,0,1,1,0,1,1]
+解释：本示例答案不唯一。
+按此输出 A = &quot;()()&quot;, B = &quot;()()&quot;, max(depth(A), depth(B)) = 1，它们的深度最小。
+像 [1,1,1,0,0,1,1,1]，也是正确结果，其中 A = &quot;()()()&quot;, B = &quot;()&quot;, max(depth(A), depth(B)) = 1 。</code></pre><p>提示：</p>
+<ul>
+<li><code>1 &lt; seq.size &lt;= 10000</code></li>
+</ul>
+<p><strong>有效括号字符串：</strong></p>
+<p>仅由 “(“ 和 “)” 构成的字符串，对于每个左括号，都能找到与之对应的右括号，反之亦然。<br>下述几种情况同样属于有效括号字符串：</p>
+<ol>
+<li><p>空字符串</p>
+</li>
+<li><p>连接，可以记作 AB（A 与 B 连接），其中 A 和 B 都是有效括号字符串</p>
+</li>
+<li><p>嵌套，可以记作 (A)，其中 A 是有效括号字符串</p>
+</li>
+</ol>
+<p><strong>嵌套深度：</strong></p>
+<p>类似地，我们可以定义任意有效括号字符串 s 的 <strong>嵌套深度</strong> depth(S)：</p>
+<ol>
+<li>s 为空时，depth(“”) = 0</li>
+<li>s 为 A 与 B 连接时，depth(A + B) = max(depth(A), depth(B))，其中 A 和 B 都是有效括号字符串</li>
+<li>s 为嵌套情况，depth(“(“ + A + “)”) = 1 + depth(A)，其中 A 是有效括号字符串</li>
+</ol>
+<p>例如：””，”()()”，和 “()(()())” 都是有效括号字符串，嵌套深度分别为 0，1，2，而 “)(“ 和 “(()” 都不是有效括号字符串。</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>读懂题目意思很关键，可使用贪心的策略，保证每次分配括号之后，<code>A</code>和<code>B</code>的深度接近</p>
+<pre><code class="java">class Solution {
+    public int[] maxDepthAfterSplit(String seq) {
+        int[] ans = new int[seq.length()];
+        int depth_a = 0;
+        int depth_b = 0;
+        int index = 0;
+        for(char c : seq.toCharArray()) {
+            if(c == &#39;(&#39;) {
+                if(depth_a &lt;= depth_b) {
+                    ans[index] = 0;
+                    depth_a++;
+                } else {
+                    ans[index] = 1;
+                    depth_b++;
+                }
+            } else if(c == &#39;)&#39;) {
+                if(depth_a &gt; depth_b) {
+                    ans[index] = 0;
+                    depth_a--;
+                } else {
+                    ans[index] = 1;
+                    depth_b--;
+                }
+            }
+            index++;
+        }    
+        return ans;
+    }
+}</code></pre>
+<h2 id="20-有效的括号"><a href="#20-有效的括号" class="headerlink" title="20.有效的括号"></a>20.有效的括号</h2><h3 id="题目-1"><a href="#题目-1" class="headerlink" title="题目"></a>题目</h3><p>给定一个只包括 <code>&#39;(&#39;</code>，<code>&#39;)&#39;</code>，<code>&#39;{&#39;</code>，<code>&#39;}&#39;</code>，<code>&#39;[&#39;</code>，<code>&#39;]&#39;</code> 的字符串，判断字符串是否有效。</p>
+<p>有效字符串需满足：</p>
+<ol>
+<li>左括号必须用相同类型的右括号闭合。</li>
+<li>左括号必须以正确的顺序闭合。</li>
+</ol>
+<p>注意空字符串可被认为是有效字符串。</p>
+<p>示例 1:</p>
+<pre><code>输入: &quot;()&quot;
+输出: true</code></pre><p>示例 2:</p>
+<pre><code>输入: &quot;()[]{}&quot;
+输出: true</code></pre><p>示例 3:</p>
+<pre><code>输入: &quot;(]&quot;
+输出: false</code></pre><p>示例 4:</p>
+<pre><code>输入: &quot;([)]&quot;
+输出: false</code></pre><p>示例 5:</p>
+<pre><code>输入: &quot;{[]}&quot;
+输出: true</code></pre><h3 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h3><p>使用栈来模拟</p>
+<pre><code class="java">class Solution {
+    public boolean isValid(String s) {
+        Deque&lt;Character&gt; stack = new LinkedList&lt;&gt;();
+        for(char c : s.toCharArray()) {
+            if(c == &#39;(&#39; || c == &#39;{&#39; || c == &#39;[&#39;) {
+                stack.addFirst(c);
+            } else {
+                char temp = &#39;\0&#39;;
+                if(stack.size() &gt; 0) {
+                    temp = stack.getFirst();
+                } 
+                if((c == &#39;)&#39; &amp;&amp; temp == &#39;(&#39;) || (c == &#39;]&#39; &amp;&amp; temp == &#39;[&#39;) || (c == &#39;}&#39; &amp;&amp; temp == &#39;{&#39;)) {
+                    stack.removeFirst();
+                } else {
+                    stack.addFirst(c);
+                }
+            }
+        }
+        return stack.size() == 0;
+    }
+}</code></pre>
+<h2 id="22-括号生成"><a href="#22-括号生成" class="headerlink" title="22.括号生成"></a>22.括号生成</h2><h3 id="题目-2"><a href="#题目-2" class="headerlink" title="题目"></a>题目</h3><p>给出 n 代表生成括号的对数，请你写出一个函数，使其能够生成所有可能的并且<strong>有效的</strong>括号组合。</p>
+<p>例如，给出 n = 3，生成结果为：</p>
+<pre><code>[
+  &quot;((()))&quot;,
+  &quot;(()())&quot;,
+  &quot;(())()&quot;,
+  &quot;()(())&quot;,
+  &quot;()()()&quot;
+]</code></pre><h3 id="思路-2"><a href="#思路-2" class="headerlink" title="思路"></a>思路</h3><h4 id="1-暴力穷举"><a href="#1-暴力穷举" class="headerlink" title="1.暴力穷举"></a>1.暴力穷举</h4><pre><code class="java">class Solution {
+    public List&lt;String&gt; generateParenthesis(int n) {
+        List&lt;String&gt; ans = new ArrayList&lt;&gt;();
+        char[] parentheses = new char[2*n];
+        generaAll(parentheses, 0, ans);
+        return ans;
+    }
+    public void generaAll(char[] parentheses, int pos, List&lt;String&gt; ans) {
+        if(pos == parentheses.length) {
+            if(checkValid(parentheses)) {
+                ans.add(new String(parentheses));
+            }
+        } else {
+            parentheses[pos] = &#39;(&#39;;
+            generaAll(parentheses, pos + 1, ans);
+            parentheses[pos] = &#39;)&#39;;
+            generaAll(parentheses, pos + 1, ans);
+        }
+    }
+    public boolean checkValid(char[] parentheses) {
+        int ok = 0;
+        for(char c : parentheses) {
+            if(c == &#39;(&#39;) {
+                ok++;
+            } else if(c == &#39;)&#39;) {
+                ok--;
+            }
+            if(ok &lt; 0) {
+                return false;
+            }
+        }
+        return ok == 0;
+    }
+}</code></pre>
+<h4 id="2-DFS，回溯"><a href="#2-DFS，回溯" class="headerlink" title="2.DFS，回溯"></a>2.DFS，回溯</h4><pre><code class="java">class Solution {
+    public List&lt;String&gt; generateParenthesis(int n) {
+        List&lt;String&gt; ans = new ArrayList&lt;&gt;();
+        dfs(&quot;&quot;, n, n, ans);
+        return ans;
+    }
+    public void dfs(String current, int open, int close, List&lt;String&gt; ans) {
+        if(open == 0 &amp;&amp; close == 0) {
+            ans.add(current);
+        } else {
+            if(open &gt; 0) {
+                dfs(current + &quot;(&quot;, open - 1, close, ans);
+            }
+            if(close &gt; 0 &amp;&amp; close &gt; open) {
+                dfs(current + &quot;)&quot;, open, close - 1, ans);
+            }
+        }
+    }
+}</code></pre>
+<h4 id="3-动态规划"><a href="#3-动态规划" class="headerlink" title="3.动态规划"></a>3.动态规划</h4><pre><code class="java">class Solution {
+    public List&lt;String&gt; generateParenthesis(int n) {
+        if(n &lt;= 0) {
+            return new ArrayList&lt;&gt;();
+        }
+        List&lt;List&lt;String&gt;&gt; dp = new ArrayList&lt;&gt;();
+        List&lt;String&gt; dp0 = new ArrayList&lt;&gt;();
+        dp0.add(&quot;&quot;);
+        dp.add(dp0);
+        for(int i = 1; i &lt;= n; i++) {
+            List&lt;String&gt; cur = new ArrayList&lt;&gt;();
+            for(int j = 0; j &lt; i; j++) {
+                List&lt;String&gt; str1 = dp.get(j);
+                List&lt;String&gt; str2 = dp.get(i - j - 1);
+                for(String s1 : str1) {
+                    for(String s2 : str2) {
+                        cur.add(&quot;(&quot; + s1 + &quot;)&quot; + s2);
+                    }
+                }
+            }
+            dp.add(cur);
+        }
+        return dp.get(n);
+    }
+}</code></pre>
+<h2 id="32-最长有效括号"><a href="#32-最长有效括号" class="headerlink" title="32.最长有效括号"></a>32.最长有效括号</h2><h3 id="题目-3"><a href="#题目-3" class="headerlink" title="题目"></a>题目</h3><p>给定一个只包含 <code>&#39;(&#39;</code> 和 <code>&#39;)&#39;</code> 的字符串，找出最长的包含有效括号的子串的长度。</p>
+<p>示例 1:</p>
+<pre><code>输入: &quot;(()&quot;
+输出: 2
+解释: 最长有效括号子串为 &quot;()&quot;</code></pre><p>示例 2:</p>
+<pre><code>输入: &quot;)()())&quot;
+输出: 4
+解释: 最长有效括号子串为 &quot;()()&quot;</code></pre><h3 id="思路-3"><a href="#思路-3" class="headerlink" title="思路"></a>思路</h3><pre><code class="java">class Solution {
+    public int longestValidParentheses(String s) {
+        int[] dp = new int[s.length()];
+        int maxLen = 0;
+        char[] array = s.toCharArray();
+        for(int i = 1; i &lt; s.length(); i++) {
+            if(array[i] == &#39;)&#39;) {
+                if(array[i-1] == &#39;(&#39;) {
+                    dp[i] = (i &gt;= 2 ? dp[i-2] : 0) + 2;
+                } else if(i - dp[i-1] &gt; 0 &amp;&amp; array[i - dp[i-1] - 1] == &#39;(&#39;) {
+                    dp[i] = dp[i-1] + 2 + (i - dp[i-1] - 2 &gt;= 0 ? dp[i - dp[i-1] - 2] : 0);
+                }
+                maxLen = Math.max(maxLen, dp[i]);
+            }
+        }
+        return maxLen;
+    }
+}</code></pre>
 
             </div>
             <hr/>
@@ -1531,7 +789,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://cparadox.github.io/2020/03/28/2020-3-28-leetcode-plan-2/">http://cparadox.github.io/2020/03/28/2020-3-28-leetcode-plan-2/</a>
+                    <a href="http://cparadox.github.io/2020/04/01/2020-4-1-leetcode-%C2%96daily/">http://cparadox.github.io/2020/04/01/2020-4-1-leetcode-%C2%96daily/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1571,6 +829,10 @@
                             
                                 <a href="/tags/leetcode/">
                                     <span class="chip bg-color">leetcode</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%AF%8F%E6%97%A5%E6%89%93%E5%8D%A1/">
+                                    <span class="chip bg-color">每日打卡</span>
                                 </a>
                             
                         </div>
@@ -1874,9 +1136,75 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2020/04/01/2020-4-1-leetcode-%C2%96daily/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="LeetCode每日打卡4-1">
+                        
+                        <span class="card-title">LeetCode每日打卡4-1</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            题目列表：
+
+1111.有效括号的嵌套深度
+
+20.有效的括号
+
+22.括号生成
+
+32.最长有效括号
+
+
+1111.有效括号的嵌套深度题目有效括号字符串 定义：对于每个左括号，都能找到与之对应的右括号，反之亦然。详情参见题末「有效括号字符
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-01
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%88%B7%E9%A2%98/" class="post-category">
+                                    刷题
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/leetcode/">
+                        <span class="chip bg-color">leetcode</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%AF%8F%E6%97%A5%E6%89%93%E5%8D%A1/">
+                        <span class="chip bg-color">每日打卡</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2020/03/29/2020-3-29-leetcode-contest/">
                     <div class="card-image">
@@ -1900,9 +1228,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-29
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-29
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1924,55 +1252,6 @@
                     
                     <a href="/tags/%E5%91%A8%E8%B5%9B/">
                         <span class="chip bg-color">周赛</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/03/28/2020-3-28-leetcode-plan/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="LeetCode刷题计划（一）">
-                        
-                        <span class="card-title">LeetCode刷题计划（一）</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            为了更有效地刷题，汇总了leetcode题目分类，同时作为之后写题解博客的索引
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-28
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%88%B7%E9%A2%98/" class="post-category">
-                                    刷题
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/leetcode/">
-                        <span class="chip bg-color">leetcode</span>
                     </a>
                     
                 </div>
