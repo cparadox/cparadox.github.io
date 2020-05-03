@@ -4,20 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="LeetCode第182场周赛, CPAraDOX">
-    <meta name="description" content="题目列表：
-
-1.找出数组中的幸运数 
-
-2.统计作战单位数 
-
-3.设计地铁系统
-
-4.找到所有好字符串
-
-
-1.找出数组中的幸运数题目在整数数组中，如果一个整数的出现频次和它的数值大小相等，我们就称这个整数为「幸运数」。
-给你一个整数数">
+    <meta name="keywords" content="LeetCode第187场周赛, CPAraDOX">
+    <meta name="description" content="1.旅行终点站题目给你一份旅游线路图，该线路图中的旅行线路用数组 paths 表示，其中 paths[i] = [cityAi, cityBi] 表示该线路将会从 cityAi 直接前往 cityBi 。请你找出这次旅行的终点站，即没有任何">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -25,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>LeetCode第182场周赛 | CPAraDOX</title>
+    <title>LeetCode第187场周赛 | CPAraDOX</title>
     <link rel="icon" type="image/jpeg" href="/favicon.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -328,12 +316,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">LeetCode第182场周赛</h1>
+                    <h1 class="description center-align post-title">LeetCode第187场周赛</h1>
                 </div>
             </div>
         </div>
@@ -479,28 +467,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-03-29
+                    2020-05-03
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-04-02
+                    2020-05-03
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.8k
+                    1.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    12 分
+                    7 分
                 </div>
                 
 
@@ -511,311 +499,173 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>题目列表：</p>
-<ul>
-<li><p>1.找出数组中的幸运数 </p>
-</li>
-<li><p>2.统计作战单位数 </p>
-</li>
-<li><p>3.设计地铁系统</p>
-</li>
-<li><p>4.找到所有好字符串</p>
-</li>
-</ul>
-<h2 id="1-找出数组中的幸运数"><a href="#1-找出数组中的幸运数" class="headerlink" title="1.找出数组中的幸运数"></a>1.找出数组中的幸运数</h2><h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p>在整数数组中，如果一个整数的出现频次和它的数值大小相等，我们就称这个整数为「幸运数」。</p>
-<p>给你一个整数数组 <code>arr</code>，请你从中找出并返回一个幸运数。</p>
-<ul>
-<li>如果数组中存在多个幸运数，只需返回 <strong>最大</strong> 的那个。</li>
-<li>如果数组中不含幸运数，则返回 <strong>-1</strong> 。</li>
-</ul>
+                <h2 id="1-旅行终点站"><a href="#1-旅行终点站" class="headerlink" title="1.旅行终点站"></a>1.旅行终点站</h2><h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p>给你一份旅游线路图，该线路图中的旅行线路用数组 <code>paths</code> 表示，其中 <code>paths[i] = [cityAi, cityBi]</code> 表示该线路将会从 <code>cityAi</code> 直接前往 <code>cityBi</code> 。请你找出这次旅行的终点站，即没有任何可以通往其他城市的线路的城市<em>。</em></p>
+<p>题目数据保证线路图会形成一条不存在循环的线路，因此只会有一个旅行终点站。</p>
 <p><strong>示例 1：</strong></p>
-<pre><code>输入：arr = [2,2,3,4]
-输出：2
-解释：数组中唯一的幸运数是 2 ，因为数值 2 的出现频次也是 2 。</code></pre><p><strong>示例 2：</strong></p>
-<pre><code>输入：arr = [1,2,2,3,3,3]
-输出：3
-解释：1、2 以及 3 都是幸运数，只需要返回其中最大的 3 。</code></pre><p><strong>示例 3：</strong></p>
-<pre><code>输入：arr = [2,2,2,3,3]
-输出：-1
-解释：数组中不存在幸运数。</code></pre><p><strong>示例 4：</strong></p>
-<pre><code>输入：arr = [5]
-输出：-1</code></pre><p><strong>示例 5：</strong></p>
-<pre><code>输入：arr = [7,7,7,7,7,7,7]
-输出：7</code></pre><p><strong>提示：</strong></p>
+<pre><code>输入：paths = [[&quot;London&quot;,&quot;New York&quot;],[&quot;New York&quot;,&quot;Lima&quot;],[&quot;Lima&quot;,&quot;Sao Paulo&quot;]]
+输出：&quot;Sao Paulo&quot; 
+解释：从 &quot;London&quot; 出发，最后抵达终点站 &quot;Sao Paulo&quot; 。本次旅行的路线是 &quot;London&quot; -&gt; &quot;New York&quot; -&gt; &quot;Lima&quot; -&gt; &quot;Sao Paulo&quot; 。</code></pre><p><strong>示例 2：</strong></p>
+<pre><code>输入：paths = [[&quot;B&quot;,&quot;C&quot;],[&quot;D&quot;,&quot;B&quot;],[&quot;C&quot;,&quot;A&quot;]]
+输出：&quot;A&quot;
+解释：所有可能的线路是：
+&quot;D&quot; -&gt; &quot;B&quot; -&gt; &quot;C&quot; -&gt; &quot;A&quot;. 
+&quot;B&quot; -&gt; &quot;C&quot; -&gt; &quot;A&quot;. 
+&quot;C&quot; -&gt; &quot;A&quot;. 
+&quot;A&quot;. 
+显然，旅行终点站是 &quot;A&quot; 。</code></pre><p><strong>示例 3：</strong></p>
+<pre><code>输入：paths = [[&quot;A&quot;,&quot;Z&quot;]]
+输出：&quot;Z&quot;</code></pre><p><strong>提示：</strong></p>
 <ul>
-<li><code>1 &lt;= arr.length &lt;= 500</code></li>
-<li><code>1 &lt;= arr[i] &lt;= 500</code></li>
+<li><code>1 &lt;= paths.length &lt;= 100</code></li>
+<li><code>paths[i].length == 2</code></li>
+<li><code>1 &lt;= cityAi.length, cityBi.length &lt;= 10</code></li>
+<li><code>cityAi != cityBi</code></li>
+<li>所有字符串均由大小写英文字母和空格字符组成。</li>
 </ul>
-<h3 id="我的思路"><a href="#我的思路" class="headerlink" title="我的思路"></a>我的思路</h3><p>一开始想的是用<code>HashMap</code>来存储整数和其出现的频次，但后来发现只需一个<code>arr.length+1</code>长度的数组，<code>index</code>位置上记录<code>index</code>大小的整数的出现次数即可。</p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>在所有的点寻找没有出度的点，用一个 <code>set</code> 保存所有路径的起点，那么不在 <code>set</code> 中的点即为所求。</p>
 <pre><code class="java">class Solution {
-    public int findLucky(int[] arr) {
-        int[] cnt = new int[arr.length + 1];
-        for(int i = 0; i &lt; arr.length; i++) {
-            if(arr[i] &lt;= arr.length) {
-                cnt[arr[i]]++;
+    public String destCity(List&lt;List&lt;String&gt;&gt; paths) {
+        Set&lt;String&gt; set = new HashSet&lt;&gt;();
+        for(List&lt;String&gt; list : paths) {
+            set.add(list.get(0));
+        }
+        for(List&lt;String&gt; list : paths) {
+            if(!set.contains(list.get(1))) {
+                return list.get(1);
             }
         }
-        int ans = -1;
-        for(int i = 1; i &lt; cnt.length; i++) {
-            if(cnt[i] == i) {
-                ans = Math.max(ans, cnt[i]);
-            }         
-        }
-        return ans;
+        return &quot;&quot;;
     }
 }</code></pre>
-<h2 id="2-统计作战单位数"><a href="#2-统计作战单位数" class="headerlink" title="2.统计作战单位数"></a>2.统计作战单位数</h2><h3 id="题目-1"><a href="#题目-1" class="headerlink" title="题目"></a>题目</h3><p> <code>n</code> 名士兵站成一排。每个士兵都有一个 <strong>独一无二</strong> 的评分 <code>rating</code> 。</p>
-<p>每 <strong>3</strong> 个士兵可以组成一个作战单位，分组规则如下：</p>
-<ul>
-<li>从队伍中选出下标分别为 <code>i</code>、<code>j</code>、<code>k</code> 的 3 名士兵，他们的评分分别为 <code>rating[i]</code>、<code>rating[j]</code>、<code>rating[k]</code></li>
-<li>作战单位需满足： <code>rating[i] &lt; rating[j] &lt; rating[k]</code> 或者 <code>rating[i] &gt; rating[j] &gt; rating[k]</code> ，其中 <code>0 &lt;= i &lt; j &lt; k &lt; n</code></li>
-</ul>
-<p>请你返回按上述条件可以组建的作战单位数量。每个士兵都可以是多个作战单位的一部分。</p>
+<h2 id="2-是否所有-1-都至少相隔-k-个元素"><a href="#2-是否所有-1-都至少相隔-k-个元素" class="headerlink" title="2.是否所有 1 都至少相隔 k 个元素"></a>2.是否所有 1 都至少相隔 k 个元素</h2><h3 id="题目-1"><a href="#题目-1" class="headerlink" title="题目"></a>题目</h3><p>给你一个由若干 <code>0</code> 和 <code>1</code> 组成的数组 <code>nums</code> 以及整数 <code>k</code>。如果所有 <code>1</code> 都至少相隔 <code>k</code> 个元素，则返回 <code>True</code> ；否则，返回 <code>False</code> 。</p>
 <p><strong>示例 1：</strong></p>
-<pre><code>输入：rating = [2,5,3,4,1]
-输出：3
-解释：我们可以组建三个作战单位 (2,3,4)、(5,4,1)、(5,3,1) 。</code></pre><p><strong>示例 2：</strong></p>
-<pre><code>输入：rating = [2,1,3]
-输出：0
-解释：根据题目条件，我们无法组建作战单位。</code></pre><p><strong>示例 3：</strong></p>
-<pre><code>输入：rating = [1,2,3,4]
-输出：4</code></pre><p><strong>提示：</strong></p>
+<p><strong><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/05/03/sample_1_1791.png" alt="img"></strong></p>
+<pre><code>输入：nums = [1,0,0,0,1,0,0,1], k = 2
+输出：true
+解释：每个 1 都至少相隔 2 个元素。</code></pre><p><strong>示例 2：</strong></p>
+<p><strong><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/05/03/sample_2_1791.png" alt="img"></strong></p>
+<pre><code>输入：nums = [1,0,0,1,0,1], k = 2
+输出：false
+解释：第二个 1 和第三个 1 之间只隔了 1 个元素。</code></pre><p><strong>示例 3：</strong></p>
+<pre><code>输入：nums = [1,1,1,1,1], k = 0
+输出：true</code></pre><p><strong>示例 4：</strong></p>
+<pre><code>输入：nums = [0,1,0,1], k = 1
+输出：true</code></pre><p><strong>提示：</strong></p>
 <ul>
-<li><code>n == rating.length</code></li>
-<li><code>1 &lt;= n &lt;= 200</code></li>
-<li><code>1 &lt;= rating[i] &lt;= 10^5</code></li>
+<li><code>1 &lt;= nums.length &lt;= 10^5</code></li>
+<li><code>0 &lt;= k &lt;= nums.length</code></li>
+<li><code>nums[i]</code> 的值为 <code>0</code> 或 <code>1</code></li>
 </ul>
-<h3 id="我的思路-1"><a href="#我的思路-1" class="headerlink" title="我的思路"></a>我的思路</h3><p>暴力解法，居然过了。后面还要优化 = =</p>
+<h3 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h3><p>使用 <code>pre</code> 保存前一个 <code>1</code> 的索引，每次遇见 <code>1</code> 则比较当前索引 <code>i</code> 和 <code>pre</code> 的差值是否大于 <code>k</code> 并更新 <code>pre</code>。</p>
 <pre><code class="java">class Solution {
-    public int numTeams(int[] rating) {
+    public boolean kLengthApart(int[] nums, int k) {
+        int pre = -1;
+        for(int i = 0; i &lt; nums.length; i++) {
+            if(nums[i] == 1) {
+                if(pre == -1) {
+                    pre = i;
+                } else if(i - pre &lt;= k) {
+                    return false;
+                } else {
+                    pre = i;
+                }
+            }
+        }
+        return true;
+    }
+}</code></pre>
+<h2 id="3-绝对差不超过限制的最长连续子数组"><a href="#3-绝对差不超过限制的最长连续子数组" class="headerlink" title="3.绝对差不超过限制的最长连续子数组"></a>3.绝对差不超过限制的最长连续子数组</h2><h3 id="题目-2"><a href="#题目-2" class="headerlink" title="题目"></a>题目</h3><p>给你一个整数数组 <code>nums</code> ，和一个表示限制的整数 <code>limit</code>，请你返回最长连续子数组的长度，该子数组中的任意两个元素之间的绝对差必须小于或者等于 <code>limit</code> <em>。</em></p>
+<p>如果不存在满足条件的子数组，则返回 <code>0</code> 。</p>
+<p><strong>示例 1：</strong></p>
+<pre><code>输入：nums = [8,2,4,7], limit = 4
+输出：2 
+解释：所有子数组如下：
+[8] 最大绝对差 |8-8| = 0 &lt;= 4.
+[8,2] 最大绝对差 |8-2| = 6 &gt; 4. 
+[8,2,4] 最大绝对差 |8-2| = 6 &gt; 4.
+[8,2,4,7] 最大绝对差 |8-2| = 6 &gt; 4.
+[2] 最大绝对差 |2-2| = 0 &lt;= 4.
+[2,4] 最大绝对差 |2-4| = 2 &lt;= 4.
+[2,4,7] 最大绝对差 |2-7| = 5 &gt; 4.
+[4] 最大绝对差 |4-4| = 0 &lt;= 4.
+[4,7] 最大绝对差 |4-7| = 3 &lt;= 4.
+[7] 最大绝对差 |7-7| = 0 &lt;= 4. 
+因此，满足题意的最长子数组的长度为 2 。</code></pre><p><strong>示例 2：</strong></p>
+<pre><code>输入：nums = [10,1,2,4,7,2], limit = 5
+输出：4 
+解释：满足题意的最长子数组是 [2,4,7,2]，其最大绝对差 |2-7| = 5 &lt;= 5 。</code></pre><p><strong>示例 3：</strong></p>
+<pre><code>输入：nums = [4,2,2,2,4,4,2,2], limit = 0
+输出：3</code></pre><p><strong>提示：</strong></p>
+<ul>
+<li><code>1 &lt;= nums.length &lt;= 10^5</code></li>
+<li><code>1 &lt;= nums[i] &lt;= 10^9</code></li>
+<li><code>0 &lt;= limit &lt;= 10^9</code></li>
+</ul>
+<h3 id="思路-2"><a href="#思路-2" class="headerlink" title="思路"></a>思路</h3><p>滑动窗口，使用单调队列维护当前窗口的最大值和最小值，保持最大值与最小值的差小于 limit 即可</p>
+<pre><code class="java">class Solution {
+    public int longestSubarray(int[] nums, int limit) {
+        if(nums.length == 1) {
+            return 1;
+        }
         int ans = 0;
-        for(int i = 0; i &lt; rating.length; i++) {
-            for(int j = i + 1; j &lt; rating.length; j++) {
-                if(rating[j] &gt; rating[i]) {
-                    for(int k = j + 1; k &lt; rating.length; k++) {
-                        if(rating[k] &gt; rating[j]) {
-                            ans++;
-                        }
-                    }
+        int n = nums.length;
+        LinkedList&lt;Integer&gt; max = new LinkedList&lt;&gt;();
+        LinkedList&lt;Integer&gt; min = new LinkedList&lt;&gt;();
+        int left = 0;
+        int right = 1;
+        max.addLast(left);
+        min.addLast(left);
+        while(right &lt; n) {
+            if(nums[max.getFirst()] - nums[min.getFirst()] &lt;= limit) {
+                while(!max.isEmpty() &amp;&amp; nums[max.getLast()] &lt; nums[right]) {
+                    max.removeLast();
                 }
+                max.addLast(right);
+                while(!min.isEmpty() &amp;&amp; nums[min.getLast()] &gt; nums[right]) {
+                    min.removeLast();
+                }
+                min.addLast(right);
+                right++;
+            } else {
+                if(max.getFirst() == left) {
+                    max.removeFirst();
+                }
+                if(min.getFirst() == left) {
+                    min.removeFirst();
+                }
+                left++;
             }
-        }
-        for(int i = 0; i &lt; rating.length; i++) {
-            for(int j = i + 1; j &lt; rating.length; j++) {
-                if(rating[j] &lt; rating[i]) {
-                    for(int k = j + 1; k &lt; rating.length; k++) {
-                        if(rating[k] &lt; rating[j]) {
-                            ans++;
-                        }
-                    }
-                }
+            if(nums[max.getFirst()] - nums[min.getFirst()] &lt;= limit) {
+                ans = Math.max(ans, right-left);
             }
         }
         return ans;
     }
 }</code></pre>
-<h2 id="3-设计地铁系统"><a href="#3-设计地铁系统" class="headerlink" title="3.设计地铁系统"></a>3.设计地铁系统</h2><h3 id="题目-2"><a href="#题目-2" class="headerlink" title="题目"></a>题目</h3><p>请你实现一个类 <code>UndergroundSystem</code> ，它支持以下 3 种方法：</p>
-<p>1.<code>checkIn(int id, string stationName, int t)</code></p>
-<ul>
-<li>编号为 <code>id</code> 的乘客在 <code>t</code> 时刻进入地铁站 <code>stationName</code> 。</li>
-<li>一个乘客在同一时间只能在一个地铁站进入或者离开。</li>
-</ul>
-<p>2.<code>checkOut(int id, string stationName, int t)</code></p>
-<ul>
-<li>编号为 <code>id</code> 的乘客在 <code>t</code> 时刻离开地铁站 <code>stationName</code> 。</li>
-</ul>
-<p>3.<code>getAverageTime(string startStation, string endStation)</code> </p>
-<ul>
-<li>返回从地铁站 <code>startStation</code> 到地铁站 <code>endStation</code> 的平均花费时间。</li>
-<li>平均时间计算的行程包括当前为止所有从 <code>startStation</code> <strong>直接到达</strong> <code>endStation</code> 的行程。</li>
-<li>调用 <code>getAverageTime</code> 时，询问的路线至少包含一趟行程。</li>
-</ul>
-<p>你可以假设所有对 <code>checkIn</code> 和 <code>checkOut</code> 的调用都是符合逻辑的。也就是说，如果一个顾客在 <strong>t1</strong> 时刻到达某个地铁站，那么他离开的时间 <strong>t2</strong> 一定满足 <strong>t2 &gt; t1</strong> 。所有的事件都按时间顺序给出。</p>
-<p><strong>示例：</strong></p>
-<pre><code>输入：
-[&quot;UndergroundSystem&quot;,&quot;checkIn&quot;,&quot;checkIn&quot;,&quot;checkIn&quot;,&quot;checkOut&quot;,&quot;checkOut&quot;,&quot;checkOut&quot;,&quot;getAverageTime&quot;,&quot;getAverageTime&quot;,&quot;checkIn&quot;,&quot;getAverageTime&quot;,&quot;checkOut&quot;,&quot;getAverageTime&quot;]
-[[],[45,&quot;Leyton&quot;,3],[32,&quot;Paradise&quot;,8],[27,&quot;Leyton&quot;,10],[45,&quot;Waterloo&quot;,15],[27,&quot;Waterloo&quot;,20],[32,&quot;Cambridge&quot;,22],[&quot;Paradise&quot;,&quot;Cambridge&quot;],[&quot;Leyton&quot;,&quot;Waterloo&quot;],[10,&quot;Leyton&quot;,24],[&quot;Leyton&quot;,&quot;Waterloo&quot;],[10,&quot;Waterloo&quot;,38],[&quot;Leyton&quot;,&quot;Waterloo&quot;]]
-
-输出：
-[null,null,null,null,null,null,null,14.0,11.0,null,11.0,null,12.0]
-
-解释：
-UndergroundSystem undergroundSystem = new UndergroundSystem();
-undergroundSystem.checkIn(45, &quot;Leyton&quot;, 3);
-undergroundSystem.checkIn(32, &quot;Paradise&quot;, 8);
-undergroundSystem.checkIn(27, &quot;Leyton&quot;, 10);
-undergroundSystem.checkOut(45, &quot;Waterloo&quot;, 15);
-undergroundSystem.checkOut(27, &quot;Waterloo&quot;, 20);
-undergroundSystem.checkOut(32, &quot;Cambridge&quot;, 22);
-undergroundSystem.getAverageTime(&quot;Paradise&quot;, &quot;Cambridge&quot;);       // 返回 14.0。从 &quot;Paradise&quot;（时刻 8）到 &quot;Cambridge&quot;(时刻 22)的行程只有一趟
-undergroundSystem.getAverageTime(&quot;Leyton&quot;, &quot;Waterloo&quot;);          // 返回 11.0。总共有 2 躺从 &quot;Leyton&quot; 到 &quot;Waterloo&quot; 的行程，编号为 id=45 的乘客出发于 time=3 到达于 time=15，编号为 id=27 的乘客于 time=10 出发于 time=20 到达。所以平均时间为 ( (15-3) + (20-10) ) / 2 = 11.0
-undergroundSystem.checkIn(10, &quot;Leyton&quot;, 24);
-undergroundSystem.getAverageTime(&quot;Leyton&quot;, &quot;Waterloo&quot;);          // 返回 11.0
-undergroundSystem.checkOut(10, &quot;Waterloo&quot;, 38);
-undergroundSystem.getAverageTime(&quot;Leyton&quot;, &quot;Waterloo&quot;);          // 返回 12.0</code></pre><p><strong>提示：</strong></p>
-<ul>
-<li>总共最多有 <code>20000</code> 次操作。</li>
-<li><code>1 &lt;= id, t &lt;= 10^6</code></li>
-<li>所有的字符串包含大写字母，小写字母和数字。</li>
-<li><code>1 &lt;= stationName.length &lt;= 10</code></li>
-<li>与标准答案误差在 <code>10^-5</code> 以内的结果都视为正确结果。</li>
-</ul>
-<h3 id="我的思路-2"><a href="#我的思路-2" class="headerlink" title="我的思路"></a>我的思路</h3><p>使用<code>HashMap&lt;String, Map&lt;Integer, Integer&gt;&gt;</code>来存储在某个地铁站，某个乘客进入/离开的时间，注意到题目说明所有对 <code>checkIn</code> 和 <code>checkOut</code> 的调用都是符合逻辑的，就省略了对调用时间的合理性检查。</p>
-<pre><code class="java">class UndergroundSystem {
-    HashMap&lt;String, Map&lt;Integer, Integer&gt;&gt; map;
-    public UndergroundSystem() {
-        map = new HashMap&lt;&gt;();
-    }
-
-    public void checkIn(int id, String stationName, int t) {
-        if(map.containsKey(stationName)) {
-            map.get(stationName).put(id, t);
-        } else {
-            HashMap&lt;Integer, Integer&gt; tmp = new HashMap&lt;&gt;();
-            tmp.put(id, t);
-            map.put(stationName, tmp);
-        }
-    }
-
-    public void checkOut(int id, String stationName, int t) {
-        if(map.containsKey(stationName)) {
-            map.get(stationName).put(id, t);
-        } else {
-            HashMap&lt;Integer, Integer&gt; tmp = new HashMap&lt;&gt;();
-            tmp.put(id, t);
-            map.put(stationName, tmp);
-        }
-    }
-
-    public double getAverageTime(String startStation, String endStation) {
-        double ans = 0.0;
-        int num = 0;
-        for(int id : map.get(startStation).keySet()) {
-            if(map.get(endStation).containsKey(id)) {
-                ans += map.get(endStation).get(id) - map.get(startStation).get(id);
-                num++;
-            }
-        }
-        return num &gt; 0 ? ans / num : 0.0;
-    }
-}
-
-/**
- * Your UndergroundSystem object will be instantiated and called as such:
- * UndergroundSystem obj = new UndergroundSystem();
- * obj.checkIn(id,stationName,t);
- * obj.checkOut(id,stationName,t);
- * double param_3 = obj.getAverageTime(startStation,endStation);
- */</code></pre>
-<h2 id="4-找到所有好字符串"><a href="#4-找到所有好字符串" class="headerlink" title="4.找到所有好字符串"></a>4.找到所有好字符串</h2><h3 id="题目-3"><a href="#题目-3" class="headerlink" title="题目"></a>题目</h3><p>给你两个长度为 <code>n</code> 的字符串 <code>s1</code> 和 <code>s2</code> ，以及一个字符串 <code>evil</code> 。请你返回 <strong>好字符串</strong> 的数目。</p>
-<p><strong>好字符串</strong> 的定义为：它的长度为 <code>n</code> ，字典序大于等于 <code>s1</code> ，字典序小于等于 <code>s2</code> ，且不包含 <code>evil</code> 为子字符串。</p>
-<p>由于答案可能很大，请你返回答案对 10^9 + 7 取余的结果。</p>
+<h2 id="4-有序矩阵中的第-k-个最小数组和"><a href="#4-有序矩阵中的第-k-个最小数组和" class="headerlink" title="4.有序矩阵中的第 k 个最小数组和"></a>4.有序矩阵中的第 k 个最小数组和</h2><h3 id="题目-3"><a href="#题目-3" class="headerlink" title="题目"></a>题目</h3><p>给你一个 <code>m * n</code> 的矩阵 <code>mat</code>，以及一个整数 <code>k</code> ，矩阵中的每一行都以非递减的顺序排列。</p>
+<p>你可以从每一行中选出 1 个元素形成一个数组。返回所有可能数组中的第 k 个 <strong>最小</strong> 数组和。</p>
 <p><strong>示例 1：</strong></p>
-<pre><code>输入：n = 2, s1 = &quot;aa&quot;, s2 = &quot;da&quot;, evil = &quot;b&quot;
-输出：51 
-解释：总共有 25 个以 &#39;a&#39; 开头的好字符串：&quot;aa&quot;，&quot;ac&quot;，&quot;ad&quot;，...，&quot;az&quot;。还有 25 个以 &#39;c&#39; 开头的好字符串：&quot;ca&quot;，&quot;cc&quot;，&quot;cd&quot;，...，&quot;cz&quot;。最后，还有一个以 &#39;d&#39; 开头的好字符串：&quot;da&quot;。</code></pre><p><strong>示例 2：</strong></p>
-<pre><code>输入：n = 8, s1 = &quot;leetcode&quot;, s2 = &quot;leetgoes&quot;, evil = &quot;leet&quot;
-输出：0 
-解释：所有字典序大于等于 s1 且小于等于 s2 的字符串都以 evil 字符串 &quot;leet&quot; 开头。所以没有好字符串。</code></pre><p><strong>示例 3：</strong></p>
-<pre><code>输入：n = 2, s1 = &quot;gx&quot;, s2 = &quot;gz&quot;, evil = &quot;x&quot;
-输出：2</code></pre><p><strong>提示：</strong></p>
+<pre><code>输入：mat = [[1,3,11],[2,4,6]], k = 5
+输出：7
+解释：从每一行中选出一个元素，前 k 个和最小的数组分别是：
+[1,2], [1,4], [3,2], [3,4], [1,6]。其中第 5 个的和是 7 。  </code></pre><p><strong>示例 2：</strong></p>
+<pre><code>输入：mat = [[1,3,11],[2,4,6]], k = 9
+输出：17</code></pre><p><strong>示例 3：</strong></p>
+<pre><code>输入：mat = [[1,10,10],[1,4,5],[2,3,6]], k = 7
+输出：9
+解释：从每一行中选出一个元素，前 k 个和最小的数组分别是：
+[1,1,2], [1,1,3], [1,4,2], [1,4,3], [1,1,6], [1,5,2], [1,5,3]。其中第 7 个的和是 9 。 </code></pre><p><strong>示例 4：</strong></p>
+<pre><code>输入：mat = [[1,1,10],[2,2,9]], k = 7
+输出：12</code></pre><p><strong>提示：</strong></p>
 <ul>
-<li><code>s1.length == n</code></li>
-<li><code>s2.length == n</code></li>
-<li><code>1 &lt;= n &lt;= 500</code></li>
-<li><code>1 &lt;= evil.length &lt;= 50</code></li>
-<li>所有字符串都只包含小写英文字母。</li>
+<li><code>m == mat.length</code></li>
+<li><code>n == mat.length[i]</code></li>
+<li><code>1 &lt;= m, n &lt;= 40</code></li>
+<li><code>1 &lt;= k &lt;= min(200, n ^ m)</code></li>
+<li><code>1 &lt;= mat[i][j] &lt;= 5000</code></li>
+<li><code>mat[i]</code> 是一个非递减数组</li>
 </ul>
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>数位DP + 前缀数组</p>
-<p>看到题目，很容易能够想到是动态规划问题来解决，接下来就是定义状态方程，该如何定义？</p>
-<p>从题目中我们知道判断某一位的状态取决于前面的字符匹配情况，有三种：</p>
-<p>s1为下限，s2为上限<br>s1为下限，s2无限制<br>s1无限制，s2为上限<br>s1和s2均无限制，即可以选任意小写字母<br>这种思想很容易联想到数位DP(数位DP不熟悉的可以查阅下相关资料)，那么在数位DP的基础上我们还要增加一个维度来解决不包含子串问题：</p>
-<p>那么增加的维度表示前面已经匹配的evil的长度, 想计算加入当前字符后最长匹配的evil长度是需要使用KMP算法的前缀数组来解决的，如果不是很熟悉这个算法参考下上周周赛的最后一题最长快乐前缀。</p>
-<p>因此一个维度表示遍历的索引，一个维度表示当前可选字符的限制，一个维度表示已经匹配的evil的长度，因此三维的状态就可以定义出来了，具体的可以看代码的注释。</p>
-<pre><code class="java">// time complxity O(n * m * m * 26)
-class Solution {
-
-  public int findGoodStrings(int n, String s1, String s2, String evil) {
-    int mod = (int) 1e9 + 7;
-    int m = evil.length();
-    long[][][] dp = new long[n + 1][4][m + 1]; // 第二维度中， 0表示s1和s2都有限制，1表s1有限制， 2表示s2有限制， 3表示s1和s2无限制； 第三维度表示前面已经匹配的evil的长度
-    // 初始化
-    for (int i = 0; i &lt; m; i++) {
-      dp[n][0][i] = 1;
-      dp[n][1][i] = 1;
-      dp[n][2][i] = 1;
-      dp[n][3][i] = 1;
-    }
-    char[] p = evil.toCharArray();
-    int[] prefix = calcuPrefixFunction(p); // O(n)，计算前缀数组
-    for (int i = n - 1; i &gt;= 0; i--) {
-      for (int j = 0; j &lt; m; j++) {
-        // handle 0
-        for (char k = s1.charAt(i); k &lt;= s2.charAt(i); k++) {
-          int state = 0;
-          if (k == s1.charAt(i) &amp;&amp; k == s2.charAt(i)) {
-            state = 0;
-          } else if (k == s1.charAt(i)) {
-            state = 1;
-          } else if (k == s2.charAt(i)) {
-            state = 2;
-          } else {
-            state = 3;
-          }
-          dp[i][0][j] += dp[i + 1][state][getNext(prefix, p, k, j)];
-          dp[i][0][j] %= mod;
-        }
-        // handle 1
-        for (char k = s1.charAt(i); k &lt;= &#39;z&#39;; k++) {
-          int state = k == s1.charAt(i) ? 1 : 3;
-          dp[i][1][j] += dp[i + 1][state][getNext(prefix, p, k, j)];
-          dp[i][1][j] %= mod;
-        }
-        //handle 2
-        for (char k = &#39;a&#39;; k &lt;= s2.charAt(i); k++) {
-          int state = k == s2.charAt(i) ? 2 : 3;
-          dp[i][2][j] += dp[i + 1][state][getNext(prefix, p, k, j)];
-          dp[i][2][j] %= mod;
-        }
-        // handle 3
-        for (char k = &#39;a&#39;; k &lt;= &#39;z&#39;; k++) {
-          int state = 3;
-          dp[i][3][j] += dp[i + 1][state][getNext(prefix, p, k, j)];
-          dp[i][3][j] %= mod;
-        }
-      }
-    }
-    return (int) dp[0][0][0];
-  }
-
-  private int[] calcuPrefixFunction(char[] p) { // 考虑边界情况， 即p的长度为0
-    int n = p.length;
-    int[] prefixArray = new int[n];  // 表示匹配的长度结果
-    prefixArray[0] = 0;
-    int j = 0;  // len of match string 表示匹配的长度
-    for (int i = 1; i &lt; n; i++) {
-      while (j &gt; 0 &amp;&amp; p[i] != p[j]) {
-        j = prefixArray[j - 1];
-      }
-      if (p[i] == p[j]) {
-        j++;
-      }
-      prefixArray[i] = j;
-    }
-    return prefixArray;
-  }
-
-  private int getNext(int[] prefix, char[] p, char c, int j) {
-    while (j &gt; 0 &amp;&amp; c != p[j]) {
-      j = prefix[j - 1];
-    }
-    if (c == p[j]) {
-      j++;
-    }
-    return j;
-  }
-}</code></pre>
-
+<h3 id="思路-3"><a href="#思路-3" class="headerlink" title="思路"></a>思路</h3>
             </div>
             <hr/>
 
@@ -840,7 +690,7 @@ class Solution {
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://cparadox.github.io/2020/03/29/2020-3-29-leetcode-contest/">http://cparadox.github.io/2020/03/29/2020-3-29-leetcode-contest/</a>
+                    <a href="http://cparadox.github.io/2020/05/03/2020-5-3-leetcode-contest-md/">http://cparadox.github.io/2020/05/03/2020-5-3-leetcode-contest-md/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1187,30 +1037,30 @@ class Solution {
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/04/01/2020-4-1-leetcode-daily/">
+                <a href="/2020/05/03/2020-5-3-leetcode-contest-md/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="LeetCode每日打卡4-1">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="LeetCode第187场周赛">
                         
-                        <span class="card-title">LeetCode每日打卡4-1</span>
+                        <span class="card-title">LeetCode第187场周赛</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1111.有效括号的嵌套深度题目有效括号字符串 定义：对于每个左括号，都能找到与之对应的右括号，反之亦然。详情参见题末「有效括号字符串」部分。
-嵌套深度 depth 定义：即有效括号字符串嵌套的层数，depth(A) 表示有效括号字符串 A
+                            1.旅行终点站题目给你一份旅游线路图，该线路图中的旅行线路用数组 paths 表示，其中 paths[i] = [cityAi, cityBi] 表示该线路将会从 cityAi 直接前往 cityBi 。请你找出这次旅行的终点站，即没有任何
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-01
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-03
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1223,6 +1073,7 @@ class Solution {
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1230,8 +1081,8 @@ class Solution {
                         <span class="chip bg-color">leetcode</span>
                     </a>
                     
-                    <a href="/tags/%E6%AF%8F%E6%97%A5%E6%89%93%E5%8D%A1/">
-                        <span class="chip bg-color">每日打卡</span>
+                    <a href="/tags/%E5%91%A8%E8%B5%9B/">
+                        <span class="chip bg-color">周赛</span>
                     </a>
                     
                 </div>
@@ -1245,24 +1096,25 @@ class Solution {
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/03/28/2020-3-28-leetcode-plan-2/">
+                <a href="/2020/05/03/2020-5-2-leetcode-contest-md/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="LeetCode刷题计划（二）">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="LeetCode第25场双周赛">
                         
-                        <span class="card-title">LeetCode刷题计划（二）</span>
+                        <span class="card-title">LeetCode第25场双周赛</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            为了更有效地刷题，汇总了leetcode题目分类，同时作为之后写题解博客的索引
+                            1.拥有最多糖果的孩子题目给你一个数组 candies 和一个整数 extraCandies ，其中 candies[i] 代表第 i 个孩子拥有的糖果数目。
+对每一个孩子，检查是否存在一种方案，将额外的 extraCandies 个糖果分
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-28
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-03
                             </span>
                         <span class="publish-author">
                             
@@ -1281,6 +1133,10 @@ class Solution {
                     
                     <a href="/tags/leetcode/">
                         <span class="chip bg-color">leetcode</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%91%A8%E8%B5%9B/">
+                        <span class="chip bg-color">周赛</span>
                     </a>
                     
                 </div>
