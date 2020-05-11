@@ -4,9 +4,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="LeetCode第25场双周赛, CPAraDOX">
-    <meta name="description" content="1.拥有最多糖果的孩子题目给你一个数组 candies 和一个整数 extraCandies ，其中 candies[i] 代表第 i 个孩子拥有的糖果数目。
-对每一个孩子，检查是否存在一种方案，将额外的 extraCandies 个糖果分">
+    <meta name="keywords" content="LeetCode第188场周赛, CPAraDOX">
+    <meta name="description" content="1.用栈操作构建数组题目给你一个目标数组 target 和一个整数 n。每次迭代，需要从 list = {1,2,3..., n} 中依序读取一个数字。
+请使用下述操作来构建目标数组 target ：
+
+Push：从 list 中读取一个新">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +16,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>LeetCode第25场双周赛 | CPAraDOX</title>
+    <title>LeetCode第188场周赛 | CPAraDOX</title>
     <link rel="icon" type="image/jpeg" href="/favicon.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -317,12 +319,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">LeetCode第25场双周赛</h1>
+                    <h1 class="description center-align post-title">LeetCode第188场周赛</h1>
                 </div>
             </div>
         </div>
@@ -439,12 +441,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/leetcode/">
-                                <span class="chip bg-color">leetcode</span>
-                            </a>
-                        
-                            <a href="/tags/%E5%91%A8%E8%B5%9B/">
-                                <span class="chip bg-color">周赛</span>
+                            <a href="/tags/leetcode%E5%91%A8%E8%B5%9B/">
+                                <span class="chip bg-color">leetcode周赛</span>
                             </a>
                         
                     </div>
@@ -468,28 +466,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-05-03
+                    2020-05-10
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-05-03
+                    2020-05-12
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.1k
+                    1.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    9 分
+                    7 分
                 </div>
                 
 
@@ -500,206 +498,184 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="1-拥有最多糖果的孩子"><a href="#1-拥有最多糖果的孩子" class="headerlink" title="1.拥有最多糖果的孩子"></a>1.拥有最多糖果的孩子</h2><h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p>给你一个数组 <code>candies</code> 和一个整数 <code>extraCandies</code> ，其中 <code>candies[i]</code> 代表第 <code>i</code> 个孩子拥有的糖果数目。</p>
-<p>对每一个孩子，检查是否存在一种方案，将额外的 <code>extraCandies</code> 个糖果分配给孩子们之后，此孩子有 <strong>最多</strong> 的糖果。注意，允许有多个孩子同时拥有 <strong>最多</strong> 的糖果数目。</p>
+                <h2 id="1-用栈操作构建数组"><a href="#1-用栈操作构建数组" class="headerlink" title="1.用栈操作构建数组"></a>1.用栈操作构建数组</h2><h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p>给你一个目标数组 <code>target</code> 和一个整数 <code>n</code>。每次迭代，需要从 <code>list = {1,2,3..., n}</code> 中依序读取一个数字。</p>
+<p>请使用下述操作来构建目标数组 <code>target</code> ：</p>
+<ul>
+<li><strong>Push</strong>：从 <code>list</code> 中读取一个新元素， 并将其推入数组中。</li>
+<li><strong>Pop</strong>：删除数组中的最后一个元素。</li>
+<li>如果目标数组构建完成，就停止读取更多元素。</li>
+</ul>
+<p>题目数据保证目标数组严格递增，并且只包含 <code>1</code> 到 <code>n</code> 之间的数字。</p>
+<p>请返回构建目标数组所用的操作序列。</p>
+<p>题目数据保证答案是唯一的。</p>
 <p><strong>示例 1：</strong></p>
-<pre><code>输入：candies = [2,3,5,1,3], extraCandies = 3
-输出：[true,true,true,false,true] 
-解释：
-孩子 1 有 2 个糖果，如果他得到所有额外的糖果（3个），那么他总共有 5 个糖果，他将成为拥有最多糖果的孩子。
-孩子 2 有 3 个糖果，如果他得到至少 2 个额外糖果，那么他将成为拥有最多糖果的孩子。
-孩子 3 有 5 个糖果，他已经是拥有最多糖果的孩子。
-孩子 4 有 1 个糖果，即使他得到所有额外的糖果，他也只有 4 个糖果，无法成为拥有糖果最多的孩子。
-孩子 5 有 3 个糖果，如果他得到至少 2 个额外糖果，那么他将成为拥有最多糖果的孩子。</code></pre><p><strong>示例 2：</strong></p>
-<pre><code>输入：candies = [4,2,1,1,2], extraCandies = 1
-输出：[true,false,false,false,false] 
-解释：只有 1 个额外糖果，所以不管额外糖果给谁，只有孩子 1 可以成为拥有糖果最多的孩子。</code></pre><p><strong>示例 3：</strong></p>
-<pre><code>输入：candies = [12,1,12], extraCandies = 10
-输出：[true,false,true]</code></pre><p><strong>提示：</strong></p>
+<pre><code>输入：target = [1,3], n = 3
+输出：[&quot;Push&quot;,&quot;Push&quot;,&quot;Pop&quot;,&quot;Push&quot;]
+解释： 
+读取 1 并自动推入数组 -&gt; [1]
+读取 2 并自动推入数组，然后删除它 -&gt; [1]
+读取 3 并自动推入数组 -&gt; [1,3]</code></pre><p><strong>示例 2：</strong></p>
+<pre><code>输入：target = [1,2,3], n = 3
+输出：[&quot;Push&quot;,&quot;Push&quot;,&quot;Push&quot;]</code></pre><p><strong>示例 3：</strong></p>
+<pre><code>输入：target = [1,2], n = 4
+输出：[&quot;Push&quot;,&quot;Push&quot;]
+解释：只需要读取前 2 个数字就可以停止。</code></pre><p><strong>示例 4：</strong></p>
+<pre><code>输入：target = [2,3,4], n = 4
+输出：[&quot;Push&quot;,&quot;Pop&quot;,&quot;Push&quot;,&quot;Push&quot;,&quot;Push&quot;]</code></pre><p><strong>提示：</strong></p>
 <ul>
-<li><code>2 &lt;= candies.length &lt;= 100</code></li>
-<li><code>1 &lt;= candies[i] &lt;= 100</code></li>
-<li><code>1 &lt;= extraCandies &lt;= 50</code></li>
+<li><code>1 &lt;= target.length &lt;= 100</code></li>
+<li><code>1 &lt;= target[i] &lt;= 100</code></li>
+<li><code>1 &lt;= n &lt;= 100</code></li>
+<li><code>target</code> 是严格递增的</li>
 </ul>
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>理解题意即可，若 <code>candies</code> 的元素 $candies[i]+extraCandies&lt; \max_{0\le i \le candies.length}(candies[i])$  ，则无法成为拥有最多的糖果的孩子，对应为<code>false</code>，否则为<code>true</code></p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>使用 <code>cnt</code> 来记录当前从 <code>list</code> 中读取的数字，若 <code>target</code> 中出现了该数字则对应操作为 <code>Push</code> ，否则对应操作为 <code>Push</code> 和 <code>Pop</code></p>
 <pre><code class="java">class Solution {
-    public List&lt;Boolean&gt; kidsWithCandies(int[] candies, int extraCandies) {
-        int max = -1;
-        for(int num : candies) {
-            max = Math.max(max, num);
-        }
-        List&lt;Boolean&gt; list = new ArrayList&lt;&gt;();
-        for(int num : candies) {
-            if(num + extraCandies &lt; max) {
-                list.add(false);
+    public List&lt;String&gt; buildArray(int[] target, int n) {
+        List&lt;String&gt; ans = new ArrayList&lt;&gt;();
+        int cnt = 1;
+        for(int i = 0; i &lt; target.length; ) {
+            if(target[i] == cnt) {
+                ans.add(&quot;Push&quot;);
+                i++;
             } else {
-                list.add(true);
+                ans.add(&quot;Push&quot;);
+                ans.add(&quot;Pop&quot;);
             }
-        }
-        return list;
-    }
-}</code></pre>
-<h2 id="2-改变一个整数能得到的最大差值"><a href="#2-改变一个整数能得到的最大差值" class="headerlink" title="2.改变一个整数能得到的最大差值"></a>2.改变一个整数能得到的最大差值</h2><h3 id="题目-1"><a href="#题目-1" class="headerlink" title="题目"></a>题目</h3><p>给你一个整数 <code>num</code> 。你可以对它进行如下步骤恰好 <strong>两次</strong> ：</p>
-<ul>
-<li>选择一个数字 <code>x (0 &lt;= x &lt;= 9)</code>.</li>
-<li>选择另一个数字 <code>y (0 &lt;= y &lt;= 9)</code> 。数字 <code>y</code> 可以等于 <code>x</code> 。</li>
-<li>将 <code>num</code> 中所有出现 <code>x</code> 的数位都用 <code>y</code> 替换。</li>
-<li>得到的新的整数 <strong>不能</strong> 有前导 0 ，得到的新整数也 <strong>不能</strong> 是 0 。</li>
-</ul>
-<p>令两次对 <code>num</code> 的操作得到的结果分别为 <code>a</code> 和 <code>b</code> 。</p>
-<p>请你返回 <code>a</code> 和 <code>b</code> 的 <strong>最大差值</strong> 。</p>
-<p><strong>示例 1：</strong></p>
-<pre><code>输入：num = 555
-输出：888
-解释：第一次选择 x = 5 且 y = 9 ，并把得到的新数字保存在 a 中。
-第二次选择 x = 5 且 y = 1 ，并把得到的新数字保存在 b 中。
-现在，我们有 a = 999 和 b = 111 ，最大差值为 888</code></pre><p><strong>示例 2：</strong></p>
-<pre><code>输入：num = 9
-输出：8
-解释：第一次选择 x = 9 且 y = 9 ，并把得到的新数字保存在 a 中。
-第二次选择 x = 9 且 y = 1 ，并把得到的新数字保存在 b 中。
-现在，我们有 a = 9 和 b = 1 ，最大差值为 8</code></pre><p><strong>示例 3：</strong></p>
-<pre><code>输入：num = 123456
-输出：820000</code></pre><p><strong>示例 4：</strong></p>
-<pre><code>输入：num = 10000
-输出：80000</code></pre><p><strong>示例 5：</strong></p>
-<pre><code>输入：num = 9288
-输出：8700</code></pre><p><strong>提示：</strong></p>
-<ul>
-<li><code>1 &lt;= num &lt;= 10^8</code></li>
-</ul>
-<h3 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h3><p>首先将整数 <code>num</code> 转换成字符串方便处理，目标是选择 <code>num</code> 中的某一位数字，将所有数位上与之相等的数字替换，分别得到最大值 <code>max</code>和最小值 <code>min</code> ，返回差值。题目要求，得到的新的整数 <strong>不能</strong> 有前导 0 ，得到的新整数也 <strong>不能</strong> 是 0。</p>
-<p>分类讨论，为了得到 <code>max</code> ，需要尽量将较高位的数字替换为 <code>9</code> ，因此只要找到 <code>num</code> 中从高位到低位第一个不为 <code>9</code> 的数字即可；为了得到 <code>min</code> ，当最高位不为 <code>1</code> 时，最高位的数字即为目标数字，将其替换为 <code>1</code> ；若最高位为1，则从高位到低位找到第一个不为 <code>1</code> 且 不为 <code>0</code> 的数字，将其替换为 <code>0</code>。</p>
-<pre><code class="java">class Solution {
-    public int maxDiff(int num) {
-        if(num &lt; 10) {
-            return 8;
-        }
-        String s = String.valueOf(num);
-        char[] str = s.toCharArray();
-        char[] min = new char[str.length];
-        char[] max = new char[str.length];
-        char c1;
-        boolean isFirst = false;
-        char c2;
-        if(str[0] == &#39;1&#39;) {
-            int index = 1;
-            c1 = str[index];
-            while(index &lt; str.length) {
-                if(c1 != &#39;1&#39; &amp;&amp; c1 != &#39;0&#39;) {
-                    break;
-                }
-                c1 = str[index++];
-            }
-        } else {
-            c1 = str[0];
-            isFirst = true;
-        }
-
-        int index = 0;
-        c2 = str[index];
-        while(index &lt; str.length) {
-            if(c2 != &#39;9&#39;) {
-                break;
-            }
-            c2 = str[index++];
-        }
-        for(int i = 0; i &lt; str.length; i++) {
-            if(c1 == &#39;1&#39;) {
-                min[i] = str[i];
-            } else {
-                if(str[i] == c1) {
-                    if(isFirst) {
-                        min[i] = &#39;1&#39;;
-                    } else {
-                        min[i] = &#39;0&#39;;
-                    }
-                } else {
-                    min[i] = str[i];
-                }
-            }
-
-            if(str[i] == c2) {
-                max[i] = &#39;9&#39;;
-            } else {
-                max[i] = str[i];
-            }
-        }
-        int ans = 0;
-        for(int i = 0; i &lt; str.length; i++) {
-            ans = 10*ans + (max[i] - min[i]);
+            cnt++;
         }
         return ans;
-
     }
 }</code></pre>
-<h2 id="3-检查一个字符串是否可以打破另一个字符串"><a href="#3-检查一个字符串是否可以打破另一个字符串" class="headerlink" title="3.检查一个字符串是否可以打破另一个字符串"></a>3.检查一个字符串是否可以打破另一个字符串</h2><h3 id="题目-2"><a href="#题目-2" class="headerlink" title="题目"></a>题目</h3><p>给你两个字符串 <code>s1</code> 和 <code>s2</code> ，它们长度相等，请你检查是否存在一个 <code>s1</code> 的排列可以打破 <code>s2</code> 的一个排列，或者是否存在一个 <code>s2</code> 的排列可以打破 <code>s1</code> 的一个排列。</p>
-<p>字符串 <code>x</code> 可以打破字符串 <code>y</code> （两者长度都为 <code>n</code> ）需满足对于所有 <code>i</code>（在 <code>0</code> 到 <code>n - 1</code> 之间）都有 <code>x[i] &gt;= y[i]</code>（字典序意义下的顺序）。</p>
-<p><strong>示例 1：</strong></p>
-<pre><code>输入：s1 = &quot;abc&quot;, s2 = &quot;xya&quot;
-输出：true
-解释：&quot;ayx&quot; 是 s2=&quot;xya&quot; 的一个排列，&quot;abc&quot; 是字符串 s1=&quot;abc&quot; 的一个排列，且 &quot;ayx&quot; 可以打破 &quot;abc&quot; 。</code></pre><p><strong>示例 2：</strong></p>
-<pre><code>输入：s1 = &quot;abe&quot;, s2 = &quot;acd&quot;
-输出：false 
-解释：s1=&quot;abe&quot; 的所有排列包括：&quot;abe&quot;，&quot;aeb&quot;，&quot;bae&quot;，&quot;bea&quot;，&quot;eab&quot; 和 &quot;eba&quot; ，s2=&quot;acd&quot; 的所有排列包括：&quot;acd&quot;，&quot;adc&quot;，&quot;cad&quot;，&quot;cda&quot;，&quot;dac&quot; 和 &quot;dca&quot;。然而没有任何 s1 的排列可以打破 s2 的排列。也没有 s2 的排列能打破 s1 的排列。</code></pre><p><strong>示例 3：</strong></p>
-<pre><code>输入：s1 = &quot;leetcodee&quot;, s2 = &quot;interview&quot;
-输出：true</code></pre><p><strong>提示：</strong></p>
+<h2 id="2-形成两个异或相等数组的三元组数目"><a href="#2-形成两个异或相等数组的三元组数目" class="headerlink" title="2.形成两个异或相等数组的三元组数目"></a>2.形成两个异或相等数组的三元组数目</h2><h3 id="题目-1"><a href="#题目-1" class="headerlink" title="题目"></a>题目</h3><p>给你一个整数数组 <code>arr</code> 。</p>
+<p>现需要从数组中取三个下标 <code>i</code>、<code>j</code> 和 <code>k</code> ，其中 <code>(0 &lt;= i &lt; j &lt;= k &lt; arr.length)</code> 。</p>
+<p><code>a</code> 和 <code>b</code> 定义如下：</p>
 <ul>
-<li><code>s1.length == n</code></li>
-<li><code>s2.length == n</code></li>
-<li><code>1 &lt;= n &lt;= 10^5</code></li>
-<li>所有字符串都只包含小写英文字母。</li>
+<li><code>a = arr[i] ^ arr[i + 1] ^ ... ^ arr[j - 1]</code></li>
+<li><code>b = arr[j] ^ arr[j + 1] ^ ... ^ arr[k]</code></li>
 </ul>
-<h3 id="思路-2"><a href="#思路-2" class="headerlink" title="思路"></a>思路</h3><p>理解题意即可，若 <code>s1</code> 的一个排列中每个元素 <code>s1[i]</code> 都 <code>&gt;=</code> (或<code>&lt;=</code>) <code>s2</code> 的一个排列中每个元素 <code>s2[i]</code> ，则满足条件。考虑反面情况，若 <code>s1</code> 和 <code>s2</code> 中的元素排序后，所有相同位置的 <code>s1[i]</code>和 <code>s2[i]</code> 无法同时满足 <code>s1[i]&gt;=s2[i]</code>（或<code>s1[i]&lt;=s2[i]</code>）,则不满足条件。</p>
+<p>注意：<strong>^</strong> 表示 <strong>按位异或</strong> 操作。</p>
+<p>请返回能够令 <code>a == b</code> 成立的三元组 (<code>i</code>, <code>j</code> , <code>k</code>) 的数目。</p>
+<p><strong>示例 1：</strong></p>
+<pre><code>输入：arr = [2,3,1,6,7]
+输出：4
+解释：满足题意的三元组分别是 (0,1,2), (0,2,2), (2,3,4) 以及 (2,4,4)</code></pre><p><strong>示例 2：</strong></p>
+<pre><code>输入：arr = [1,1,1,1,1]
+输出：10</code></pre><p><strong>示例 3：</strong></p>
+<pre><code>输入：arr = [2,3]
+输出：0</code></pre><p><strong>示例 4：</strong></p>
+<pre><code>输入：arr = [1,3,5,7,9]
+输出：3</code></pre><p><strong>示例 5：</strong></p>
+<pre><code>输入：arr = [7,11,12,9,5,2,7,17,22]
+输出：8</code></pre><p><strong>提示：</strong></p>
+<ul>
+<li><code>1 &lt;= arr.length &lt;= 300</code></li>
+<li><code>1 &lt;= arr[i] &lt;= 10^8</code></li>
+</ul>
+<h3 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h3><p>根据题目意思，直接暴力，可以通过</p>
 <pre><code class="java">class Solution {
-    public boolean checkIfCanBreak(String s1, String s2) {
-        int n = s1.length();
-        char[] str1 = s1.toCharArray();
-        char[] str2 = s2.toCharArray();
-        Arrays.sort(str1);
-        Arrays.sort(str2);
-        int flag = 0;
+    public int countTriplets(int[] arr) {
+        int ans = 0;
+        int n = arr.length;
         for(int i = 0; i &lt; n; i++) {
-            if(str1[i] != str2[i]) {
-                flag = str1[i] &gt; str2[i] ? 0 : 1;
+            int a = 0;
+            for(int j = i+1; j &lt; n; j++) {
+                a ^= arr[j-1];
+                int b = 0;
+                for(int k = j; k &lt; n; k++) {
+                    b ^= arr[k];
+                    if(a == b) {
+                        ans++;
+                    }
+                }
             }
         }
-        for(int i = 0; i &lt; n; i++) {
-            if(flag == 0 &amp;&amp; str1[i] &lt; str2[i]) {
-                return false;
-            }
-            if(flag == 1 &amp;&amp; str1[i] &gt; str2[i]) {
-                return false;
-            }
-        }
-        return true;
+        return ans;
     }
 }</code></pre>
-<h2 id="4-每个人戴不同帽子的方案数"><a href="#4-每个人戴不同帽子的方案数" class="headerlink" title="4.每个人戴不同帽子的方案数"></a>4.每个人戴不同帽子的方案数</h2><h3 id="题目-3"><a href="#题目-3" class="headerlink" title="题目"></a>题目</h3><p>总共有 <code>n</code> 个人和 <code>40</code> 种不同的帽子，帽子编号从 <code>1</code> 到 <code>40</code> 。</p>
-<p>给你一个整数列表的列表 <code>hats</code> ，其中 <code>hats[i]</code> 是第 <code>i</code> 个人所有喜欢帽子的列表。</p>
-<p>请你给每个人安排一顶他喜欢的帽子，确保每个人戴的帽子跟别人都不一样，并返回方案数。</p>
-<p>由于答案可能很大，请返回它对 <code>10^9 + 7</code> 取余后的结果。</p>
+<p>利用 $a==b$ 等价于$a\bigoplus b == 0$ ，改进到 $O(n^2)$ 的复杂度</p>
+<pre><code class="java">class Solution {
+    public int countTriplets(int[] arr) {
+        int n = arr.length;
+        int ans = 0;
+        for(int i = 0; i &lt; n; i++) {
+            int start = arr[i];
+            for(int j = i+1; j &lt; n; j++) {
+                start ^= arr[j];
+                if(start == 0) {
+                    ans += j - i;
+                }
+            }
+        }
+        return ans;
+    }
+}</code></pre>
+<h2 id="3-收集树上所有苹果的最少时间"><a href="#3-收集树上所有苹果的最少时间" class="headerlink" title="3.收集树上所有苹果的最少时间"></a>3.收集树上所有苹果的最少时间</h2><h3 id="题目-2"><a href="#题目-2" class="headerlink" title="题目"></a>题目</h3><p>给你一棵有 <code>n</code> 个节点的无向树，节点编号为 <code>0</code> 到 <code>n-1</code> ，它们中有一些节点有苹果。通过树上的一条边，需要花费 1 秒钟。你从 <strong>节点 0</strong> 出发，请你返回最少需要多少秒，可以收集到所有苹果，并回到节点 0 。</p>
+<p>无向树的边由 <code>edges</code> 给出，其中 <code>edges[i] = [fromi, toi]</code> ，表示有一条边连接 <code>from</code> 和 <code>toi</code> 。除此以外，还有一个布尔数组 <code>hasApple</code> ，其中 <code>hasApple[i] = true</code> 代表节点 <code>i</code> 有一个苹果，否则，节点 <code>i</code> 没有苹果。</p>
 <p><strong>示例 1：</strong></p>
-<pre><code>输入：hats = [[3,4],[4,5],[5]]
-输出：1
-解释：给定条件下只有一种方法选择帽子。
-第一个人选择帽子 3，第二个人选择帽子 4，最后一个人选择帽子 5。</code></pre><p><strong>示例 2：</strong></p>
-<pre><code>输入：hats = [[3,5,1],[3,5]]
-输出：4
-解释：总共有 4 种安排帽子的方法：
-(3,5)，(5,3)，(1,3) 和 (1,5)</code></pre><p><strong>示例 3：</strong></p>
-<pre><code>输入：hats = [[1,2,3,4],[1,2,3,4],[1,2,3,4],[1,2,3,4]]
-输出：24
-解释：每个人都可以从编号为 1 到 4 的帽子中选。
-(1,2,3,4) 4 个帽子的排列方案数为 24 。</code></pre><p><strong>示例 4：</strong></p>
-<pre><code>输入：hats = [[1,2,3],[2,3,5,6],[1,3,7,9],[1,8,9],[2,5,7]]
-输出：111</code></pre><p><strong>提示：</strong></p>
+<p><strong><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/05/10/min_time_collect_apple_1.png" alt="img"></strong></p>
+<pre><code>输入：n = 7, edges = [[0,1],[0,2],[1,4],[1,5],[2,3],[2,6]], hasApple = [false,false,true,false,true,true,false]
+输出：8 
+解释：上图展示了给定的树，其中红色节点表示有苹果。一个能收集到所有苹果的最优方案由绿色箭头表示。</code></pre><p><strong>示例 2：</strong></p>
+<p><strong><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/05/10/min_time_collect_apple_2.png" alt="img"></strong></p>
+<pre><code>输入：n = 7, edges = [[0,1],[0,2],[1,4],[1,5],[2,3],[2,6]], hasApple = [false,false,true,false,false,true,false]
+输出：6
+解释：上图展示了给定的树，其中红色节点表示有苹果。一个能收集到所有苹果的最优方案由绿色箭头表示。</code></pre><p><strong>示例 3：</strong></p>
+<pre><code>输入：n = 7, edges = [[0,1],[0,2],[1,4],[1,5],[2,3],[2,6]], hasApple = [false,false,false,false,false,false,false]
+输出：0</code></pre><p><strong>提示：</strong></p>
 <ul>
-<li><code>n == hats.length</code></li>
-<li><code>1 &lt;= n &lt;= 10</code></li>
-<li><code>1 &lt;= hats[i].length &lt;= 40</code></li>
-<li><code>1 &lt;= hats[i][j] &lt;= 40</code></li>
-<li><code>hats[i]</code> 包含一个数字互不相同的整数列表。</li>
+<li><code>1 &lt;= n &lt;= 10^5</code></li>
+<li><code>edges.length == n-1</code></li>
+<li><code>edges[i].length == 2</code></li>
+<li><code>0 &lt;= fromi, toi &lt;= n-1</code></li>
+<li><code>fromi &lt; toi</code></li>
+<li><code>hasApple.length == n</code></li>
+</ul>
+<h3 id="思路-2"><a href="#思路-2" class="headerlink" title="思路"></a>思路</h3><p>使用数组 <code>parent</code> 来记录节点 <code>i</code> 的父亲节点，使用数组 <code>visited</code> 来记录当前节点是否被访问过。从所有苹果节点开始，自底向上地递归搜索，若当前节点为根节点 <code>0</code> 或 被访问过，则终止搜索，否则继续搜索其父节点。</p>
+<pre><code class="java">class Solution {
+    int[] parent;
+    boolean[] visited;
+    int ans;
+    public int minTime(int n, int[][] edges, List&lt;Boolean&gt; hasApple) {
+        parent = new int[n];
+        visited = new boolean[n];
+        ans = 0;
+        for(int[] e : edges) {
+            parent[e[1]] = e[0];
+        }
+        for(int i = 0; i &lt; n; i++) {
+            if(hasApple.get(i)) {
+                dfs(i);
+            }
+        }
+        return ans &lt;&lt; 1;
+    }
+    public void dfs(int u) {
+        if(u == 0 || visited[u]) {
+            return;
+        }
+        ans++;
+        visited[u] = true;
+        dfs(parent[u]);
+    }
+}</code></pre>
+<h2 id="4-切披萨的方案数"><a href="#4-切披萨的方案数" class="headerlink" title="4.切披萨的方案数"></a>4.切披萨的方案数</h2><h3 id="题目-3"><a href="#题目-3" class="headerlink" title="题目"></a>题目</h3><p>给你一个 <code>rows x cols</code> 大小的矩形披萨和一个整数 <code>k</code> ，矩形包含两种字符： <code>&#39;A&#39;</code> （表示苹果）和 <code>&#39;.&#39;</code> （表示空白格子）。你需要切披萨 <code>k-1</code> 次，得到 <code>k</code> 块披萨并送给别人。</p>
+<p>切披萨的每一刀，先要选择是向垂直还是水平方向切，再在矩形的边界上选一个切的位置，将披萨一分为二。如果垂直地切披萨，那么需要把左边的部分送给一个人，如果水平地切，那么需要把上面的部分送给一个人。在切完最后一刀后，需要把剩下来的一块送给最后一个人。</p>
+<p>请你返回确保每一块披萨包含 <strong>至少</strong> 一个苹果的切披萨方案数。由于答案可能是个很大的数字，请你返回它对 10^9 + 7 取余的结果。</p>
+<p><strong>示例 1：</strong></p>
+<p><strong><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/05/10/ways_to_cut_apple_1.png" alt="img"></strong></p>
+<pre><code>输入：pizza = [&quot;A..&quot;,&quot;AAA&quot;,&quot;...&quot;], k = 3
+输出：3 
+解释：上图展示了三种切披萨的方案。注意每一块披萨都至少包含一个苹果。</code></pre><p><strong>示例 2：</strong></p>
+<pre><code>输入：pizza = [&quot;A..&quot;,&quot;AA.&quot;,&quot;...&quot;], k = 3
+输出：1</code></pre><p><strong>示例 3：</strong></p>
+<pre><code>输入：pizza = [&quot;A..&quot;,&quot;A..&quot;,&quot;...&quot;], k = 1
+输出：1</code></pre><p><strong>提示：</strong></p>
+<ul>
+<li><code>1 &lt;= rows, cols &lt;= 50</code></li>
+<li><code>rows == pizza.length</code></li>
+<li><code>cols == pizza[i].length</code></li>
+<li><code>1 &lt;= k &lt;= 10</code></li>
+<li><code>pizza</code> 只包含字符 <code>&#39;A&#39;</code> 和 <code>&#39;.&#39;</code> 。</li>
 </ul>
 <h3 id="思路-3"><a href="#思路-3" class="headerlink" title="思路"></a>思路</h3>
             </div>
@@ -726,7 +702,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://cparadox.github.io/2020/05/03/2020-5-2-leetcode-contest-md/">http://cparadox.github.io/2020/05/03/2020-5-2-leetcode-contest-md/</a>
+                    <a href="http://cparadox.github.io/2020/05/10/2020-5-10-leetcode-contest/">http://cparadox.github.io/2020/05/10/2020-5-10-leetcode-contest/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -764,12 +740,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/leetcode/">
-                                    <span class="chip bg-color">leetcode</span>
-                                </a>
-                            
-                                <a href="/tags/%E5%91%A8%E8%B5%9B/">
-                                    <span class="chip bg-color">周赛</span>
+                                <a href="/tags/leetcode%E5%91%A8%E8%B5%9B/">
+                                    <span class="chip bg-color">leetcode周赛</span>
                                 </a>
                             
                         </div>
@@ -1073,11 +1045,65 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/05/03/2020-5-3-leetcode-contest-md/">
+                <a href="/2020/05/10/2020-5-10-leetcode-contest/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="LeetCode第188场周赛">
+                        
+                        <span class="card-title">LeetCode第188场周赛</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            1.用栈操作构建数组题目给你一个目标数组 target 和一个整数 n。每次迭代，需要从 list = {1,2,3..., n} 中依序读取一个数字。
+请使用下述操作来构建目标数组 target ：
+
+Push：从 list 中读取一个新
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-10
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%88%B7%E9%A2%98/" class="post-category">
+                                    刷题
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/leetcode%E5%91%A8%E8%B5%9B/">
+                        <span class="chip bg-color">leetcode周赛</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/05/03/2020-5-3-leetcode-contest/">
                     <div class="card-image">
                         
                         
@@ -1093,63 +1119,8 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-03
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%88%B7%E9%A2%98/" class="post-category">
-                                    刷题
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/leetcode/">
-                        <span class="chip bg-color">leetcode</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%91%A8%E8%B5%9B/">
-                        <span class="chip bg-color">周赛</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/04/06/2020-4-5-leetcode-contest/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/25.jpg" class="responsive-img" alt="LeetCode第23场双周赛">
-                        
-                        <span class="card-title">LeetCode第23场双周赛</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            1.统计最大组的数目题目给你一个整数 n 。请你先求出从 1 到 n 的每个整数 10 进制表示下的数位和（每一位上的数字相加），然后把数位和相等的数字放到同一个组中。
-请你统计每个组中的数字数目，并返回数字数目并列最多的组有多少个。
-示例
-                        
-                    </div>
-                    <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-06
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-03
                             </span>
                         <span class="publish-author">
                             
@@ -1360,7 +1331,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <!-- <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">11.5k</span>&nbsp;字
+                class="white-color">13.2k</span>&nbsp;字
             
             
             
